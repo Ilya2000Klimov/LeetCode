@@ -3,19 +3,18 @@ public:
     int pivotIndex(vector<int>& nums)
     {
         int lSum = 0;
-        int rSum = std::accumulate(nums.begin() + 1, nums.end(), 0);
+        int rSum = std::accumulate(nums.begin(), nums.end(), 0);
         
-        int i = 0;
-        for (; lSum != rSum;)
+        
+        for (int i = 0; i < nums.size(); i++)
         {
-            i++;
-            
-            if (i < nums.size())
-                lSum += nums[i-1];
-            else
-                return -1;
             rSum -=nums[i];
+            
+            if (lSum == rSum)
+                return i;
+            
+            lSum +=nums[i];
         }
-        return i;
+        return -1;
     }
 };
