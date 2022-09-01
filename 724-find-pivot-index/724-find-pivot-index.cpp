@@ -10,8 +10,7 @@ public:
         {
             rSum -=nums[i];
             
-            if (lSum == rSum)
-                return i;
+            if (lSum == rSum) return i;
             
             lSum +=nums[i];
         }
