@@ -13,13 +13,11 @@ public:
         
         for (auto &q : queries)
         {
-            if (nums[q[1]] % 2 == 0)
-                sum -= nums[q[1]];
+            if (nums[q[1]] % 2 == 0) sum -= nums[q[1]];
             
             nums[q[1]] += q[0];
             
-            if (nums[q[1]] % 2 == 0)
-                sum += nums[q[1]];
+            if (nums[q[1]] % 2 == 0) sum += nums[q[1]];
             
             result.push_back(sum);
         }
