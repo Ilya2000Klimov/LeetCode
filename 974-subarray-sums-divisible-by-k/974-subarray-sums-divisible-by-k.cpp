@@ -1,4 +1,4 @@
-class Solution {
+class Solution {    //O(n) single pass solution
 public:
     int subarraysDivByK(vector<int>& nums, int k) {
         
@@ -12,8 +12,7 @@ public:
         {
             pref = (pref + n) % k;
             
-            if (pref < 0)
-                pref += k;
+            if (pref < 0) pref += k;
             
             ans += remainders[pref]++;
         }
