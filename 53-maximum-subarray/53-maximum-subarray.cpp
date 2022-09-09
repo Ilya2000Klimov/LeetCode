@@ -18,5 +18,3 @@ public:
         return (max);
     }
 };
-
-//not quite right
