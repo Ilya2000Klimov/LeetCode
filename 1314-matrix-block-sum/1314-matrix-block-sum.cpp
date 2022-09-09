@@ -1,3 +1,4 @@
+// Due to the 2d nature of the problem the time complexity is O(n^2)
 class Solution {
 public:
     vector<int> prefixSum(const vector<int>& A)
