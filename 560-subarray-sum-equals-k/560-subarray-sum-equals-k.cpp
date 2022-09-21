@@ -17,7 +17,6 @@ public:
             ans += map[sum-k];
             
             map[sum]++;
-            
         }
         
         return ans;
