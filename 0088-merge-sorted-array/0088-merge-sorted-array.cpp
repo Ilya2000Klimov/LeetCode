@@ -12,12 +12,14 @@ public:
         {
             for(int i = 0, n1 = 0, n2 = 0; i < nSize; i++)
             {
-                if (n1 >= m)
+                N[i] = n1 >= m ?  N[i] = nums2[n2++] : n2 >= n ? N[i] = nums1[n1++] : nums1[n1] < nums2[n2] ? nums1[n1++] : nums2[n2++];
+                
+                /*if (n1 >= m)
                     N[i] = nums2[n2++];
                 else if(n2 >= n)
                     N[i] = nums1[n1++];
                 else
-                    N[i] = nums1[n1] < nums2[n2] ? nums1[n1++] : nums2[n2++];
+                    N[i] = nums1[n1] < nums2[n2] ? nums1[n1++] : nums2[n2++];*/
                 
             }
         
