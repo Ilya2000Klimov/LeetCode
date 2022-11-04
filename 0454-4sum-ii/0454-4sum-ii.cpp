@@ -5,13 +5,13 @@ public:
         int count=0;
         unordered_map<int,int> mp;
         
-        for (auto &it1: nums1)
-            for (auto &it2:nums2)
-                mp[it1+it2]++;
+        for (auto &n1: nums1)
+            for (auto &n2:nums2)
+                mp[n1+n2]++;
         
-        for(auto &it3: nums3)
-            for(auto &it4:nums4)
-               if(mp.count(0-it3-it4)) count+=mp[0-it3-it4];
+        for(auto &n3: nums3)
+            for(auto &n4:nums4)
+               if(mp.count(0-n3-n4)) count+=mp[0-n3-n4];
         
         return count;
         
